@@ -53,6 +53,11 @@ func main() {
 	} else if err := handle.SetBPFFilter(filter + exclude); err != nil {
 		panic(err)
 	} else {
+		fmt.Println(os.Args[0] + " started")
+		fmt.Println("Listening on device " + dev)
+		fmt.Println("BPF set to " + filter + exclude)
+		fmt.Println("Forwarding packets to " + host + ":" + port)
+
 		packetSource := gopacket.NewPacketSource(handle, handle.LinkType())
 		for packet := range packetSource.Packets() {
 			handlePacket(packet)
