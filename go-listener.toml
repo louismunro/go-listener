@@ -1,0 +1,13 @@
+# go-listener TOML configuration file
+# Default values are commented out
+# 
+
+# The BPF to use for capture
+# filter = 'udp and (port 67 or port 68 or port 546 or port 547 or port 767)'
+
+# The host and port where to redirect
+# host  = 'localhost'
+# port  = '6767'
+
+# The device from which to capture
+# device   = 'any'
